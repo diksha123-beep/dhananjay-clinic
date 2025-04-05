@@ -313,13 +313,32 @@ header nav ul li a {
       color: #009688;
     }
     
-    .quote {
-      font-size: 2em;
-      color: #009688;
-      position: absolute;
-      top: 10px;
-      left: 15px;
-    }
+  .quote {
+  font-size: 2.5rem;
+  color: #009688;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .testimonial {
+    width: 90% !important;
+    margin: 15px auto;
+  }
+
+  .quote {
+    font-size: 1.8rem;
+    top: 5px;
+    left: 10px;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -415,38 +434,32 @@ header nav ul li a {
       </div>
   </div>
 </section>
-<section class="testimonial-section">
-  <div class="container">
-      <center><h2>What Our Patients Say</h2></center>
-      <div class="row">
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <div class="testimonial border p-3 rounded">
-                  <div class="quote">
-  
-                  </div>
-                  <p class="mb-2">"Excellent care provided!"</p>
-                  <div class="testimonial-footer">- Ramesh Kumar</div>
-              </div>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">What Our Clients Say</h2>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active text-center p-4">
+              <p class="lead">"Great service! Highly recommend to anyone looking for quality work."</p>
+              <h5>- Rajesh Patil</h5>
           </div>
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <div class="testimonial border p-3 rounded">
-                  <div class="quote">  
-                  </div>
-                  <p class="mb-2">"Great Experience!"</p>
-                  <div class="testimonial-footer">- Anita Joshi</div>
-              </div>
+          <div class="carousel-item text-center p-4">
+              <p class="lead">"Amazing experience, very professional and efficient!"</p>
+              <h5>- Anita Joshi</h5>
           </div>
-          <div class="col-12 col-md-4">
-              <div class="testimonial border p-3 rounded">
-                  <div class="quote">
-                  </div>
-                  <p class="mb-2">"Well managed."</p>
-                  <div class="testimonial-footer">- Rajesh Patil</div>
-              </div>
+          <div class="carousel-item text-center p-4">
+              <p class="lead">"Highly recommend! The treatments are gentle but effective, and the emotional support I received made a big difference."</p>
+              <h5>- Ramesh Kumar</h5>
           </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </button>
   </div>
-</section>
+</div>
+  
   <section id="about" class="bg-light py-5">
     <div class="container">
       <h2 class="text-center mb-4">About Dhananjay Clinic</h2>
